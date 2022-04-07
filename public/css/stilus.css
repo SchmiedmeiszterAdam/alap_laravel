@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 80%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+header {
+    margin: 30px 0;
+}
+
+#uj-tev {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+#uj-tev>select {
+    min-width: 45%;
+    margin: 5px;
+}
+
+#uj-tev>#tev-kuldes {
+    width: 50px;
+    height: 20px;
+}
+
+#tev-tarolo {
+    width: 100%;
+    margin: 30px 0;
+}
+
+#tev-tarolo tr {
+    border: 1px solid black;
+}
+
+#tevekenyesegek {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tevekenyesegek>thead {
+    min-height: 60px;
+    text-align: center;
+    background-color: gainsboro;
+}
+
+#tevekenyesegek td {
+    text-align: center;
+}
+
+#tevekenyesegek tbody tr:nth-child(even) {
+    background-color: lightcyan;
+}
+
+@media screen and (max-width:450px) {
+    main {
+        width: 98%;
+    }
+
+    #uj-tev {
+        flex-direction: column;
+    }
+
+    #uj-tev>select, #uj-tev>#tev-kuldes {
+        width: 95%;
+    }
+}

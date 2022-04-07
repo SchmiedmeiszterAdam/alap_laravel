@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BejegyzesekController;
+use App\Http\Controllers\TevekenysegController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,13 +15,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/bejegyzesek', [BejegyzesekController::class,'index']);
+Route::get('/tevekenysegek', [TevekenysegController::class,'index']);
+Route::get('/user', [UserController::class,'index']);
+Route::post('/bejegyzesek', [BejegyzesekController::class,'store']);
 Route::get('/', function () {
-    return view('welcome');
+    return view('tevekenyseg');
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
